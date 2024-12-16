@@ -301,6 +301,7 @@ function ItemContainerGrid:canAddItem(item)
         return false
     end
 
+    -- Change to remove capacity check --
     local capacity = self:_getCapacity()
     if self.containerDefinition.isFragile and item:getContainer() ~= self.inventory and capacity < item:getActualWeight() + self.inventory:getCapacityWeight() then
         return false
